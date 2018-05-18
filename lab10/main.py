@@ -8,7 +8,7 @@ P32 = P ** 32
 P128 = P ** 128
 
 # a
-print('Stationary distribution π = ({}, {}, {}, {})'.format(*P128[0].tolist()[0]))
+print('Stationary distribution π = {}'.format(P128[0].tolist()[0]))
 # b
 print('Probability of being in state 3 after 32 steps starting from state 0 is: {}'.format(P32[0, 3]))
 # c
@@ -22,10 +22,10 @@ for eps in e:
     t = 2
     Pt = P.copy()
     while not((abs(Pt[0, :] - P128[0, :])).max() <= eps):
-        Pt = P.copy() ** t
         t += 1
+        Pt = P.copy() ** t
+
     result_t.append(t)
 
 for el in zip(e, result_t):
     print('For eps = {} we need t = {} steps'.format(*el))
-
