@@ -55,7 +55,7 @@ for i, el in enumerate(product(range(k), repeat=k)):
 print(time.time() - s)
 print(max(pomoc))
 
-
+test
 
 
 
