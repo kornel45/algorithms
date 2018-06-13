@@ -54,6 +54,3 @@ for i, el in enumerate(product(range(k), repeat=k)):
     mutual_exclusion(list(el), k)
 print(time.time() - s)
 print(max(pomoc))
-
-
-test
